@@ -1,3 +1,8 @@
+from abilities.open_browser import get_browser
+from tasks.visit_homepage import visit_homepage
+from questions.page_title import page_title
+
+
 def test_titulo_tekus():
     """
     Prueba automatizada que verifica el título de la página principal de Tekus.
@@ -8,9 +13,7 @@ def test_titulo_tekus():
         3. Obtiene el título de la página y lo compara con el valor esperado.
         4. Cierra el navegador y detiene Playwright.
     """
-    from abilities.open_browser import get_browser
-    from tasks.visit_homepage import visit_homepage
-    from questions.page_title import page_title
+   
 
     browser, playwright = get_browser()
     page = browser.new_page()
